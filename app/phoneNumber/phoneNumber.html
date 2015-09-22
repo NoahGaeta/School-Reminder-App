@@ -1,0 +1,10 @@
+<div ng-controller="phoneNumber">
+    <a href="#/phoneNumber">
+  <span editable-text="user.number" e-form="textBtnForm">
+    {{ user.number || 'Your number' }}
+  </span>
+    <button class="btn btn-default" ng-click="textBtnForm.$show()" ng-hide="textBtnForm.$visible">
+        edit
+    </button>
+    </a>
+</div>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>International Telephone Input</title>
+    <link rel="stylesheet" href="../app/intl-tel-input/build/css/intlTelInput.css">
+    <link rel="stylesheet" href="../app/intl-tel-input/build/css/demo.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+  </head>
+  <div id ="background">
+  <div class="container">
+
+    <div class="page-header text-center">
+      <h1><span class="fa fa-phone"></span>    Phone Verification</h1>
+      <a href="/logout" class="btn btn-default btn-sm">Logout</a>
+      <a href="/app" class="btn btn-default btn-sm">Home</a>
+
+    </div>
+
+    <div class="row">
+
+      <!-- LOCAL INFORMATION -->
+      <div id = "phone">
+      <h1>Phone Number Verification</h1>
+      </div>
+      <div class="col-sm-6">
+        <div class="well">
+          <h3><span class="fa fa-user"><strong>        Logged in as</strong> <%= user.local.email %> </span></h3>
+          <h3><span class="fa fa-phone"><strong>       Phonenumber</strong> <%= user.local.phonenumber %> </span></h3>
+          <body>
+          <form action = "/phonenumber" method="post">
+            <div id ="buttonn">
+            <button type="submit">Verify</button>
+            </div>
+          </form>
+          </body>
+        </div>
+        </div>
+          <!-- Load jQuery from CDN so can run demo immediately -->
+          <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+          <script src="../app/intl-tel-input/build/js/intlTelInput.js"></script>
+          <script>
+            $("#mobile-number").intlTelInput({
+              allowExtensions: true,
+              autoFormat: false,
+              autoHideDialCode: false,
+              //autoPlaceholder: false,
+              defaultCountry: "auto",
+              //ipinfoToken: "yolo",
+              //nationalMode: false,
+              numberType: "MOBILE",
+              onlyCountries: ['us', 'gb', 'ch', 'ca', 'do'],
+              //preferredCountries: ['cn', 'jp'],
+              //preventInvalidNumbers: true,
+              utilsScript: "../app/intl-tel-input/lib/libphonenumber/build/utils.js"
+            });
+          </script>
+
+
+
+        </div>
+      </div>
+
+    </div>
+
+</html>

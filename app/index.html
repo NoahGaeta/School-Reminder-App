@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>
+<html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>
+<html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>
+<html lang="en" ng-app="myApp" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="en" ng-app="myApp" class="no-js" xmlns:https="http://www.w3.org/1999/xhtml"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>School Remind</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/0.9.4/angular-material.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+          rel="stylesheet">
+    <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/normalize.css">
+    <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/main.css">
+    <link rel="stylesheet" href="app.css">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="bower_components/angularjs-datepicker/src/css/angular-datepicker.css" rel="stylesheet" type="text/css" />
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="bower_components/angular-xeditable/dist/css/xeditable.css" rel="stylesheet">
+    <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
+    <script src='http://maps.googleapis.com/maps/api/js?libraries=places&sensor=false&language=en&v=3.17'></script>
+    <link href='http://fonts.googleapis.com/css?family=Roboto:300' rel='stylesheet' type='text/css'>
+    <link href="http://fonts.googleapis.com/css?family=Corben:bold" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Nobile" rel="stylesheet" type="text/css">
+</head>
+<html ng-app="myApp">
+<md-fab-toolbar>
+    <md-toolbar>
+        <md-fab-actions class="md-toolbar-tools">
+
+            School Remind
+
+            <span flex></span>
+
+
+                <md-button aria-label="label"
+                           class="nav-button md-icon-button md-primary md-fab md-raised md-mini"
+                           ng-href="#/addText">
+                    <i class="nav-right material-icons">add</i>
+                    <md-tooltip md-autohide>Add today's homework</md-tooltip>
+                </md-button>
+             <md-button aria-label="comment"
+                           class="nav-button md-icon-button md-primary md-fab md-raised md-mini"
+                           ng-href="#/about">
+                    <i class="nav-right material-icons">group</i>
+                    <md-tooltip md-autohide>About</md-tooltip>
+                </md-button>
+            <a href="/profile">
+            <md-button aria-label="comment"
+                       class="nav-button md-icon-button md-primary md-fab md-raised md-mini">
+                <i class="nav-right material-icons">account_circle</i>
+                <md-tooltip md-autohide>Manage Profile</md-tooltip>
+            </md-button>
+        </a>
+            </div>
+        </md-fab-actions>
+    </md-toolbar>
+</md-fab-toolbar>
+
+
+<!--[if lt IE 7]>
+<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
+    your browser</a> to improve your experience.</p>
+<![endif]-->
+
+<div ng-view></div>
+
+<!-- In production use:
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
+-->
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-animate.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-aria.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angular_material/0.9.4/angular-material.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0rc1/angular-route.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.6.0/ui-bootstrap-tpls.min.js"></script>
+<script src="bower_components/angular-xeditable/dist/js/xeditable.js"></script>
+<script src='bower_components/lodash/lodash.min.js'></script>
+<script src="bower_components/angular-route/angular-route.js"></script>
+<script src="bower_components/ng-places-autocomplete/ngPlacesAutocomplete.min.js"></script>
+<script src ="signUp/signUp.js"></script>
+<script src="app.js"></script>
+<script src="addText/addText.js"></script>
+<script src="bower_components/angularjs-datepicker/src/js/angular-datepicker.js"></script>
+<script src="phoneNumber/phoneNumber.js"></script>
+<script src="about/about.js"></script>
+<script src="bower_components/angular-telstra-sms/src/app/index.js"></script>
+<script src="components/version/version.js"></script>
+<script src="components/version/version-directive.js"></script>
+<script src="components/version/interpolate-filter.js"></script>
+<script src="//code.angularjs.org/1.2.16/angular-cookies.min.js"></script>
+<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<!-- Auth0 Lock script and AngularJS module -->
+<script src="//cdn.auth0.com/js/lock-7.5.min.js"></script>
+<!-- angular-jwt and angular-storage -->
+<script type="text/javascript" src="yamsasfer/dist/sms.min.js"></script>
+<script src="yamsasfer/app/bower_components/intl-tel-input/build/js/intlTelInput.min.js"></script>
+<script src="yamsasfer/app/bower_components/angular-timer/dist/angular-timer.js"></script>
+<script src="yamsasfer/app/bower_components/angular-sanitize/angular-sanitize.min.js"></script>
+
+<script type="text/javascript" src="//cdn.rawgit.com/auth0/angular-storage/master/dist/angular-storage.js"></script>
+<script type="text/javascript" src="//cdn.rawgit.com/auth0/angular-jwt/master/dist/angular-jwt.js"></script>
+<script src="//cdn.auth0.com/w2/auth0-angular-4.js"> </script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+</body>
+</html>
+</html>

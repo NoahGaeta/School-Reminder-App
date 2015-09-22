@@ -1,0 +1,132 @@
+/* app css stylesheet */
+
+/*******************************Global Styling**************************************/
+body{
+    font-family: 'Roboto', sans-serif;
+}
+/*******************************Other Styling**************************************/
+
+.menu {
+    list-style: none;
+    border-bottom: 0.1em solid black;
+    margin-bottom: 2em;
+    padding: 0 0 0.5em;
+}
+
+.menu:before {
+    content: "[";
+}
+
+.menu:after {
+    content: "]";
+}
+
+.menu > li {
+    display: inline;
+}
+
+.menu > li:before {
+    content: "|";
+    padding-right: 0.3em;
+}
+
+.menu > li:nth-child(1):before {
+    content: "";
+    padding: 0;
+}
+
+.angular-google-map-container {
+    height: 91.5vh;
+}
+/***********************Add time***********************/
+.editable-bstime .editable-input i.icon-chevron-up:before {
+    content: '\e113';
+}
+.editable-bstime .editable-input i.icon-chevron-down:before {
+    content: '\e114';
+}
+.editable-bstime .editable-input i.icon-chevron-up,
+.editable-bstime .editable-input i.icon-chevron-down {
+    position: relative;
+    top: 7px;
+    display: inline-block;
+    font-family: 'Glyphicons Halflings';
+    -webkit-font-smoothing: antialiased;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 4;
+}
+
+/***********************Angular Material Overrides***********************/
+.local-bar-icon {
+    margin-right: 10px;
+}
+
+.top-frame {
+    margin: 10px 10px 0px 10px;
+    background-color: rgb(63,81,181);
+}
+#top-content{
+    background-color: rgb(63,81,181);
+    color:floralwhite;
+}
+.bot-frame{
+    margin: 0px 10px 0px 10px ;
+}
+
+.bot-content{
+    margin-top: 35px;
+}
+#barAutocomplete {
+    width: 390px;
+}
+
+.my-location-btn {
+    margin-left: 130px;
+    background: floralwhite;
+    position: absolute;
+    left: 250px;
+    top: 78px;
+    z-index: 99;
+}
+
+.my-location-icon {
+    margin-top: 9px;
+    color: rgb(63, 81, 181)
+}
+.logo-button{
+    padding: 13px;
+}
+.nav-right{
+    margin-top: 8px;
+}
+.nav-button{
+    margin:20px;
+}
+.find-beer{
+    font-weight:100;
+}
+.beerNameContainer{
+    width:100%;
+}
+
+.about-text{
+    text-align:center;
+}
+/***********************Google Maps Stuff********************************/
+
+.map-search {
+    margin-top: 25px;
+    width: 250px;
+    padding: 10px;
+    border: none;
+    border-bottom: solid 2px #c9c9c9;
+    transition: border 0.3s;
+}
+/**********************Responsive Web Design********************************/
+@media screen and (max-width: 435px){
+    #barAutocomplete {
+        width: 290px;
+    }
+
+}
