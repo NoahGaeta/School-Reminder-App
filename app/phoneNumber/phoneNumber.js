@@ -12,5 +12,5 @@ angular.module('myApp.phoneNumber', ['ngRoute', 'ngPlacesAutocomplete','xeditabl
     $scope.user = {
         number: ""
     };
-    $scope.number = ['202-555-0181','765-427-7238']
+    $scope.number = ['202-555-0181']
 });
